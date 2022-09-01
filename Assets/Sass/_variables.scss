@@ -1,0 +1,37 @@
+// Font Family
+
+$ff-poppins: 'Poppins', sans-serif;
+$ff-roboto: 'Roboto Condensed', sans-serif;
+$ff-archivo: 'Archivo', sans-serif;
+$ff-source: 'Source Sans Pro', sans-serif;
+
+// Color
+$yellow-1: #C69E3F;
+$yellow-2:  #B69046;
+$yellow-3: #CB9D37;
+$black: #001A31;
+$white: #ffffff;
+$mossGreen: #00344C;
+$gray: #A5A5A5;
+
+:root {
+  // Font size
+
+  --fz-12: 12px;
+  --fz-13: 13px;
+  --fz-14: 14px;
+  --fz-15: 15px;
+  --fz-16: 16px;
+  --fz-18: 18px;
+  --fz-20: 20px;
+  --fz-24: 24px;
+  --fz-36: 36px;
+
+  // Font weight
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+
+}
