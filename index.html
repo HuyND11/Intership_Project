@@ -35,6 +35,10 @@
         <div class="header_logo">
           <img src="./Assets/Image/logo.png" alt="Logo" class="header_logo_image">
         </div>
+        <input type="checkbox" id="check_menu_header">
+        <label for="check_menu_header" class="header_hamburger">
+          <div class="header_hamburger_item"></div>
+        </label>
         <nav class="header_nav">
           <ul class="header_nav_list">
             <li class="header_nav_item"><a href="#" class="header_nav_link">About Us</a></li>
@@ -62,74 +66,15 @@
         <div class="product_wrapper wrapper">
           <div class="product_slide">
             <div class="product_slide_view swiper mySwiper2">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                </div>
-                <div class="swiper-slide product_slide_item product_slide_view_item">
-                  <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                </div>
+              <div class="swiper-wrapper product_slide_view_JS ">
+
               </div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-next "></div>
               <div class="swiper-button-prev"></div>
             </div>
             <div class="product_slide_preview">
               <div thumbsSlider="" class="product_slide_preview_wrapper swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                  </div>
-                  <div class="swiper-slide product_slide_item product_slide_preview_item">
-                    <img class="product_slide_image" src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                  </div>
+                <div class="swiper-wrapper product_slide_preview_JS">
                 </div>
               </div>
             </div>
@@ -142,21 +87,23 @@
               <p class="product_price_value">99,000,000</p>
             </div>
             <div class="product_tab_list">
-              <p class="product_tab_item product_tab_item_active">Classic</p>
-              <p class="product_tab_item">Ebony</p>
-              <p class="product_tab_item">Rose</p>
+              <p class="product_tab_item" onclick="changeSlide('classic')">Classic</p>
+              <p class="product_tab_item" onclick="changeSlide('ebony')">Ebony</p>
+              <p class="product_tab_item" onclick="changeSlide('rose')">Rose</p>
             </div>
             <div class="product_quantity">
               <p class="product_quantity_title">Quantity</p>
               <div class="product_quantity_input_wrapper">
-                <i class="fa-solid fa-minus product_quantity_icon product_quantity_icon_minus"></i>
+                <i class="fa-solid fa-minus product_quantity_icon product_quantity_icon_minus"
+                  onclick="changeQuantity('minus')"></i>
                 <input type="number" value="01" class="product_quantity_input">
-                <i class="fa-solid fa-plus product_quantity_icon product_quantity_icon_plus"></i>
+                <i class="fa-solid fa-plus product_quantity_icon product_quantity_icon_plus"
+                  onclick="changeQuantity('plus')"></i>
               </div>
             </div>
             <div class="product_btn">
-              <button class="product_btn_item product_btn_add">Add To Cart</button>
-              <button class="product_btn_item product_btn_order">Order Now</button>
+              <button class="product_btn_item product_btn_outline">Add To Cart</button>
+              <button class="product_btn_item product_btn_primary">Order Now</button>
             </div>
             <div class="product_description_list">
               <p class="product_description_item"><span class="product_description_title">Titanium
@@ -196,7 +143,7 @@
                     <li class="information_nav_sub_item">sories, and warranty card included.</li>
                   </ul>
                 </nav>
-                <li class="information_nav_item">Warranty Policy</li>
+                <li class="information_nav_item">Information</li>
                 <nav class="information_nav_sub">
                   <ul class="information_nav_sub_list">
                     <p class="information_nav_sub_title">Warranty coverage</p>
@@ -393,6 +340,18 @@
           </div>
         </div>
       </section>
+
+      <section class="contact">
+        <div class="contact_item go_to_top" onclick="goToTop()">
+          <i class="fa-solid fa-circle-up contact_icon contact_icon_top"></i>
+        </div>
+        <div class="contact_item">
+          <i class="fa-brands fa-facebook-messenger contact_icon contact_icon_messenger "></i>
+        </div>
+        <div class="contact_item">
+          <i class="fa-solid fa-phone contact_icon contact_icon_phone"></i>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -412,9 +371,9 @@
       </div>
       <div class="footer_item">
         <div class="footer_social">
-          <div class="footer_social_item"><i class="fa-brands fa-linkedin footer_social_icon"></i></div>
-          <div class="footer_social_item"><i class="fa-brands fa-instagram footer_social_icon"></i></div>
-          <div class="footer_social_item"><i class="fa-brands fa-facebook footer_social_icon"></i></div>
+          <a href="#" class="footer_social_item"><i class="fa-brands fa-linkedin footer_social_icon"></i></a>
+          <a href="#" class="footer_social_item"><i class="fa-brands fa-instagram footer_social_icon"></i></a>
+          <a href="#" class="footer_social_item"><i class="fa-brands fa-facebook footer_social_icon"></i></a>
         </div>
         <nav class="footer_nav">
           <ul class="footer_nav_list">
