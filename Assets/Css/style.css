@@ -60,6 +60,7 @@ ol {
   --fz-36: 36px;
   --fw-300: 300;
   --fw-400: 400;
+  --fw-500: 500;
   --fw-600: 600;
   --fw-700: 700;
 }
@@ -667,6 +668,10 @@ main .contact_icon {
 main .contact_icon_messenger {
   color: #00B2FF;
 }
+main .go_to_top {
+  display: none;
+}
+
 footer .footer_item:nth-child(1) {
   display: flex;
   justify-content: center;
@@ -754,6 +759,189 @@ footer .footer_text {
   font-weight: var(--fw-400);
   line-height: 1.1;
   opacity: 0.5;
+}
+
+main .cart {
+  margin-top: 106px;
+}
+main .cart_title {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: var(--fw-700);
+  font-size: var(--fz-36);
+  text-transform: capitalize;
+  line-height: 1.4;
+  letter-spacing: 0.9px;
+  margin-bottom: 56px;
+}
+main .cart_body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+main .cart_product {
+  flex: 1;
+  margin-right: 15px;
+}
+main .cart_pay {
+  padding: 0 16px;
+  background: #ffffff;
+  border: 1px solid #E1E1E1;
+  border-radius: 3px;
+}
+main .cart_pay_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+main .cart_pay_item_title {
+  font-weight: var(--fw-400);
+  font-size: var(--fz-14);
+  line-height: 1.3;
+  letter-spacing: 0.35px;
+  margin-right: 16px;
+}
+main .cart_pay_item_content {
+  font-weight: var(--fw-600);
+  font-size: var(--fz-14);
+  line-height: 1.3;
+  letter-spacing: 0.4px;
+  color: #001A31;
+}
+main .cart_pay_item_total {
+  font-weight: var(--fw-700);
+  font-size: var(--fz-22);
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  color: #CB9D37;
+}
+main .cart_pay_line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #E1E1E1;
+}
+main .cart_pay_form_code {
+  display: flex;
+  align-items: center;
+  max-width: 220px;
+  height: 40px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #E1E1E1;
+  border-radius: 30px;
+  overflow: hidden;
+}
+main .cart_pay_input {
+  display: flex;
+  flex: 1;
+  padding-left: 22px;
+  padding-right: 56px;
+  min-width: 1px;
+  border: none;
+  outline: none;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-14);
+  line-height: 1.4;
+}
+main .cart_pay_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 99px;
+  background-color: transparent;
+  font-size: var(--fz-14);
+  font-weight: var(--fw-400);
+  line-height: 0.6;
+  color: #CB9D37;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+main .cart_pay_btn:hover {
+  color: #ffffff;
+  background-color: #CB9D37;
+}
+main .cart_pay_confirm {
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  padding: 15px 56px;
+  font-weight: var(--fw-600);
+  font-size: var(--fz-14);
+  line-height: 0.7;
+  letter-spacing: 0.7px;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
+  border-radius: 30px;
+}
+main .support {
+  margin-top: 139px;
+  background-color: #FAFAFA;
+}
+main .support_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px 0;
+  text-align: center;
+}
+main .support_title {
+  font-weight: var(--fw-700);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: var(--fz-24);
+  letter-spacing: 0.9px;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+main .support_sub_title {
+  max-width: 585px;
+  font-weight: var(--fw-400);
+  font-size: var(--fz-15);
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+main .support_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 784px;
+}
+main .support_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - 16px) / 2);
+  background-color: #00344C;
+}
+main .support_item_text {
+  font-weight: var(--fw-500);
+  font-size: var(--fz-16);
+  color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+main .support_mail {
+  padding: 44px 97px;
+}
+main .support_phone {
+  padding: 44px 110px;
+}
+main .support_icon {
+  color: linear-gradient(86.15deg, #CC9F3A 0%, #EBCF82 100%);
+  margin-bottom: 16px;
+}
+main .support_icon::before {
+  font-size: calc(var(--fz-36) + 12px);
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 1100px) {

@@ -697,10 +697,10 @@ main {
       &_messenger {
         color: #00B2FF;
       }
-      &_top {
-        // color: red;
-      }
     }
+  }
+  .go_to_top {
+    display: none;
   }
 
 }
