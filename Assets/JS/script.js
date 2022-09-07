@@ -107,22 +107,24 @@ const listImage = {
     "classic-6",
   ],
   ebony: [
-    "ebony-1",
     "classic-1",
     "classic-2",
     "classic-3",
     "classic-4",
     "classic-5",
     "classic-6",
+    "classic-1",
   ],
   rose: [
-    "rose-1",
     "classic-1",
     "classic-2",
     "classic-3",
     "classic-4",
     "classic-5",
     "classic-6",
+    "classic-1",
+    "classic-2",
+    "classic-3",
   ],
 };
 const changeSlide = (name) => {

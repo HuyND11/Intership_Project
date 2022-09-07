@@ -75,9 +75,8 @@ header {
       }
 
       &_line {
-        display: block;
+        align-self: stretch;
         width: 1px;
-        height: 20px;
         background-color: $white;
         margin: 0 30px;
       }
@@ -183,7 +182,7 @@ main {
         width: 100%;
         height: 100%;
         max-width: 589px;
-        max-height: 589px;
+        // max-height: 589px;
 
         &_item {
           width: 100%;
@@ -366,7 +365,7 @@ main {
       }
 
       &_outline {
-        padding: 13.5px 71.5px;
+        padding: 11.5px 69.5px;
         background: linear-gradient(rgb(255, 255, 255) 0 0) padding-box, linear-gradient(to right, rgb(204, 159, 58), rgb(235, 207, 130)) border-box;
         border: 2px solid transparent;
         border-radius: 30px;
@@ -472,6 +471,10 @@ main {
 
     &_item {
       display: none;
+      &_wrapper {
+        max-width: 785px;
+        margin: 0 auto;
+      }
     }
 
     .default_open {
@@ -479,7 +482,6 @@ main {
     }
 
     &_nav {
-      padding-left: 20px;
 
       &_list {
         list-style-type: decimal;
@@ -558,7 +560,7 @@ main {
       justify-content: center;
       align-items: center;
       width: calc((100% - 15px) / 2);
-      padding: 47px 160px 48px 159px;
+      padding: 47px 148px 36px 147px;
       background-color: #FAFAFA;
       border-radius: 3px;
     }
@@ -574,6 +576,11 @@ main {
       height: 100%;
       object-fit: contain;
     }
+    &_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     &_name {
       margin-bottom: 16px;
@@ -587,7 +594,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 55px;
+      margin-bottom: 43px;
 
       &_unit {
         font-size: var(--fz-18);
@@ -605,6 +612,7 @@ main {
     }
 
     &_btn {
+      padding: 12px;
       border: none;
       outline: none;
       color: $yellow-3;
@@ -613,6 +621,11 @@ main {
       font-weight: var(--fw-600);
       border-radius: 30px;
       transition: all 0.4s ease;
+      line-height: 1.3;
+      &:hover {
+        background-color: $yellow-3;
+        color: $white;
+      }
     }
   }
 
@@ -787,22 +800,32 @@ footer {
 
     &_nav {
       margin-bottom: 61px;
+      width: 100%;
+      max-width: 896px;
 
       &_list {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         text-align: center;
       }
 
       &_item {
-        margin: 0 51px;
+        display: flex;
+        align-items: center;
       }
 
       &_link {
         color: $white;
         font-size: var(--fz-14);
         font-weight: var(--fw-400);
-        line-height: 1.2;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
+      &_line {
+        align-self: stretch;
+        width: 1px;
+        background-color: $white;
       }
     }
 
