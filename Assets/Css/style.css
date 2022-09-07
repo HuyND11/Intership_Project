@@ -667,6 +667,10 @@ main .contact_icon {
 main .contact_icon_messenger {
   color: #00B2FF;
 }
+main .go_to_top {
+  display: none;
+}
+
 footer .footer_item:nth-child(1) {
   display: flex;
   justify-content: center;
