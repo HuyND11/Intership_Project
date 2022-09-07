@@ -11,12 +11,12 @@ window.onscroll = () => {
     header.classList.remove("header_scroll");
     headerLogo.classList.remove("header_logo_scroll");
   }
+  hideShow();
 };
 
 // Slide
 
 var swiper = new Swiper(".mySwiper", {
-  // loop: true,
   spaceBetween: 12,
   slidesPerView: 6,
   freeMode: true,
@@ -24,7 +24,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 var swiper2 = new Swiper(".mySwiper2", {
   loop: true,
-  // spaceBetween: 10,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -172,6 +171,3 @@ const hideShow = () => {
   }
 }
 
-// OnScroll 
-
-window.onscroll = () => hideShow();
