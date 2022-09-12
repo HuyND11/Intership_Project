@@ -16,13 +16,20 @@ window.onscroll = () => {
 
 // Slide
 
-var swiper = new Swiper(".mySwiper", {
+const perView = new Swiper(".mySwiper", {
   spaceBetween: 12,
   slidesPerView: 6,
   freeMode: true,
   watchSlidesProgress: true,
+
+//   breakpoints: {
+//     425: {
+//         slidesPerView: 3,
+//     },
+// },
 });
-var swiper2 = new Swiper(".mySwiper2", {
+
+const view = new Swiper(".mySwiper2", {
   loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
@@ -32,7 +39,7 @@ var swiper2 = new Swiper(".mySwiper2", {
     delay: 4500,
   },
   thumbs: {
-    swiper: swiper,
+    swiper: perView,
   },
 });
 
@@ -61,9 +68,9 @@ const changeQuantity = (event) => {
     document.querySelector(".product_quantity_input").value
   );
   if (event == "plus") {
-    quantity++;
+    quantity < 99 ?  quantity++ : alert("Max");
   } else {
-    quantity >= 1 ? quantity-- : alert("Error! ");
+    quantity > 1 ? quantity-- : alert("Error! ");
   }
   document.querySelector(".product_quantity_input").value =
     formatNumber(quantity);
@@ -139,18 +146,18 @@ const changeSlide = (name) => {
     slidePreview.removeChild(slidePreview.firstChild);
   }
   listImage[name].forEach((ele) => {
-    const preview = ` 
+    const slidesPreviewChild = ` 
       <div class="swiper-slide product_slide_item product_slide_preview_item">
         <img class="product_slide_image product_slide_preview_image" src="./Assets/Image/${ele}.png" />
       </div>
     `;
-    const view = ` 
+    const slidesViewChild = ` 
       <div class="swiper-slide product_slide_item product_slide_view_item">
         <img class="product_slide_image" src="./Assets/Image/${ele}.png" />
       </div>
     `;
-    swiper.appendSlide(preview);
-    swiper2.appendSlide(view);
+    perView.appendSlide(slidesPreviewChild);
+    view.appendSlide(slidesViewChild);
   });
 };
 

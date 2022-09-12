@@ -16,3 +16,82 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-width: 234px;
+  min-height: 48px;
+  border: none;
+  outline: none;
+  padding: 4px;
+  color: $white;
+  background: linear-gradient(86.15deg, #957327 0%, #DFC47A 100%);
+  border-radius: 30px;
+  font-weight: var(--fw-600);
+  font-size: var(--fz-14);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+
+  &-outline {
+    color: $yellow-3;
+
+    &:hover {
+      .btn {
+        &_overlay {
+          opacity: 0;
+        }
+
+        &_text {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-full {
+    .btn {
+      &_overlay {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .btn {
+        &_overlay {
+          opacity: 1;
+        }
+
+        &_text {
+          color: $yellow-3;
+        }
+      }
+    }
+  }
+
+  &_overlay {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 99px;
+    z-index: 5;
+    transition: 0.4s;
+    opacity: 1;
+  }
+
+  &_text {
+    text-transform: capitalize;
+    padding: 4px 56px;
+    white-space: nowrap;
+    z-index: 10;
+  }
+
+}
