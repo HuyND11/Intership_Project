@@ -22,11 +22,11 @@ const perView = new Swiper(".mySwiper", {
   freeMode: true,
   watchSlidesProgress: true,
 
-//   breakpoints: {
-//     425: {
-//         slidesPerView: 3,
-//     },
-// },
+  //   breakpoints: {
+  //     425: {
+  //         slidesPerView: 3,
+  //     },
+  // },
 });
 
 const view = new Swiper(".mySwiper2", {
@@ -35,6 +35,7 @@ const view = new Swiper(".mySwiper2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  spaceBetween: 12,
   autoplay: {
     delay: 4500,
   },
@@ -68,7 +69,7 @@ const changeQuantity = (event) => {
     document.querySelector(".product_quantity_input").value
   );
   if (event == "plus") {
-    quantity < 99 ?  quantity++ : alert("Max");
+    quantity < 99 ? quantity++ : alert("Max");
   } else {
     quantity > 1 ? quantity-- : alert("Error! ");
   }
@@ -90,12 +91,12 @@ const formatNumber = (number) => {
 const tabs = document.querySelectorAll(".product_tab_item");
 tabs.forEach((tab) => {
   tab.addEventListener("click", function () {
-    tabs.forEach(ele => {
+    tabs.forEach((ele) => {
       ele.classList.remove("product_tab_item_active");
-    })
+    });
     this.classList.add("product_tab_item_active");
   });
-}); 
+});
 // Change slide
 
 const listImage = {
@@ -166,17 +167,55 @@ changeSlide();
 // Back to top
 
 const goToTop = () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
-}
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 // Hide and show button go to top
 
 const topBtn = document.querySelector(".go_to_top");
 const hideShow = () => {
-  if (window.pageYOffset >= 70){
+  if (window.pageYOffset >= 70) {
     topBtn.style.display = "flex";
   } else {
     topBtn.style.display = "none";
   }
+};
+
+// Add to cart
+
+const addToCart = () => {
+  const quantity = parseInt(
+    document.querySelector(".product_quantity_input").value
+  );
+  if (quantity >= 2) {
+    openModal("modal-fail");
+  } else {
+    openModal("modal-success");
+  }
+};
+
+// Modal
+
+const modals = document.querySelectorAll(".modal");
+const btnClose = document.querySelectorAll(".modal_btn");
+
+btnClose.forEach(ele => {
+  ele.addEventListener("click", function () {
+    modals.forEach(modal => {
+      modal.style.display = "none";
+    })
+  });
+})
+
+
+
+const openModal = (modalName) => {
+  const modal = document.querySelector("." + modalName);
+  modal.style.display= "block";
+}
+
+const closeModal = (modalName) => {
+  const modal = document.querySelector("." + modalName);
+  modal.style.display = "none";
 }
 

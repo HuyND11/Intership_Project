@@ -102,7 +102,7 @@
               </div>
             </div>
             <div class="product_btn">
-              <button class="btn btn-outline">
+              <button class="btn btn-outline " onclick="addToCart()">
                 <span class="btn_overlay"></span>
                 <span class="btn_text ">Add to cart</span>
               </button>
@@ -410,6 +410,47 @@
         <p class="footer_text">Copyright informations</p>
       </div>
     </footer>
+  </div>
+
+  <!-- Modal -->
+
+  <div class="modal modal-fail">
+    <div class="modal_content">
+      <div class="modal_header">
+       <h3 class="modal_title"> Exceeding the amount</h3>
+      </div>
+
+      <div class="modal_body">
+        <p class="modal_body_text">The maximum quantity of <strong>XOR Titanium</strong> products that can be purchased is
+          <strong>2</strong> products/order.</p>
+      </div>  
+
+      <div class="modal_footer">
+        <button class="btn btn-full modal_btn">
+          <span class="btn_overlay"></span>
+          <span class="btn_text">Agree</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-success">
+    <div class="modal_content">
+      <div class="modal_header">
+       <h3 class="modal_title"> Success</h3>
+      </div>
+
+      <div class="modal_body">
+        <p class="modal_body_text">Congratulation </p>
+      </div>  
+
+      <div class="modal_footer">
+        <button class="btn btn-full modal_btn">
+          <span class="btn_overlay"></span>
+          <span class="btn_text">close</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Swiper -->
